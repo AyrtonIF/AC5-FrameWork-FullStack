@@ -10,7 +10,7 @@ class ClienteModel():
         name = 'João Ayrton'
         email = 'exemplo@hotmail.com'
         cursor = mysql.connection.cursor()
-        cursor.execute(''' INSERT INTO clientes (nome, email, telefone) VALUES(%s,%s,%s)''',(name,email))
+        cursor.execute(''' INSERT INTO clientes (nome, email, telefone) VALUES(%s,%s)''',(name,email))
         mysql.connection.commit()
         cursor.close()
 
